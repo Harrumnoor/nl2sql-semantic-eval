@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*.pyo
+
+venv/
+*.log
+results/
+
+data/
+checkpoints/
+trained_model_best/
+.DS_Store
+Thumbs.db
