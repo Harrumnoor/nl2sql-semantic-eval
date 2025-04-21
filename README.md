@@ -31,6 +31,7 @@ Combines:
   --batch_size 8 \
   --epochs 10 \
   --trials 10
+   
    **CodeBERT Evaluation:**
    python src/inference_codebert.py \
   --model_path $CODEBERT_MODEL \
