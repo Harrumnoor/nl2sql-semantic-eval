@@ -10,51 +10,51 @@ Combines:
   **Installation** 
 1. Clone the repo
    
-     git clone https://github.com/Harrumnoor/nl2sql-semantic-eval
+     ```git clone https://github.com/Harrumnoor/nl2sql-semantic-eval```
 
-     cd nl2sql-semantic-eval
+     ```cd nl2sql-semantic-eval```
 
 
 3. Create & activate a virtualenv
    
-     python3 -m venv venv
+     ```python3 -m venv venv```
 
-     source venv/bin/activate     # macOS/Linux
+     ```source venv/bin/activate     # macOS/Linux```
    
-     venv\Scripts\activate        # Windows
+     ```venv\Scripts\activate        # Windows```
    
 5. Install dependencies
    
-     pip install -r requirements.txt
+     ```pip install -r requirements.txt```
    
 7. Configure paths
    
-     export DATA_DIR=./data
+     ```export DATA_DIR=./data```
    
-     export TRAIN_PATH=$DATA_DIR/train.json
+     ```export TRAIN_PATH=$DATA_DIR/train.json```
    
-     export TEST_PATH=$DATA_DIR/test.json
+     ```export TEST_PATH=$DATA_DIR/test.json```
 
    **Usage**
    **CodeBERT Training:**
-   python src/train_codebert.py \
+   ```python src/train_codebert.py \
   --train_path $TRAIN_PATH \
   --model_name microsoft/codebert-base \
   --max_len 512 \
   --batch_size 8 \
   --epochs 10 \
-  --trials 10
+  --trials 10```
    
    **CodeBERT Evaluation:**
-   python src/inference_codebert.py \
+   ```python src/inference_codebert.py \
   --model_path $CODEBERT_MODEL \
   --data_path $TEST_PATH \
-  --batch_size 8
+  --batch_size 8```
 
    **Evaluating Hybrid(Qwen2.5 + EA)**
-   python src/inference_qwen.py \
+   ```python src/inference_qwen.py \
   --model_path $QWEN_MODEL \
-  --data_path $TEST_PATH
+  --data_path $TEST_PATH```
 
    
 
