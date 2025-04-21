@@ -89,19 +89,22 @@ Each JSON record must include:
 
 ```
 nl2sql-semantic-eval/
-├── src/
-│   ├── train_codebert.py
-│   ├── inference_codebert.py
-│   └── inference_qwen.py
 ├── data/
-│   ├── train.json
-│   └── test.json
-├── checkpoints/            # Qwen2.5 model
-├── trained_model_best/     # CodeBERT model
-├── results/                # logs & misclassified outputs
-├── requirements.txt
-├── .gitignore
-└── README.md
+│   ├── code-bert/
+│   │   ├── train.json       # Training and validation set for CodeBERT
+│   │   └── test.json        # Test set for CodeBERT inference
+│   └── qwen2.5/
+│       └── train.jsonl      # Dataset for Qwen2.5 inference and evaluation
+│
+├── src/
+│   ├── train_codebert.py       # Train CodeBERT with Optuna hyperparameter search
+│   ├── inference_codebert.py   # Inference and metrics for CodeBERT classifier
+│   └── inference_hybrid.py     # Qwen2.5 + EA + ensemble evaluation script
+│
+├── .gitignore                  # Files and folders to ignore in Git
+├── requirements.txt            # Python dependencies
+├── LICENSE                     # License information
+└── README.md                   # This file
 ```
 
 ---
