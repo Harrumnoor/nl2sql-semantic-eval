@@ -74,12 +74,13 @@ python src/inference_qwen.py \
 Each JSON record must include:
 ```json
 {
-  "question":   "Your natural‑language question",
+  "question":   "Natural-language question",
   "query":      "Predicted SQL query",
   "gold_parse": "Gold SQL query",
-  "correctness": 0 | 1,
-  "db_id":      "database identifier",
+  "correctness": "0 | 1",
+  "db_id":      "Database identifier",
   "category":   "Category code",
+  "sub-category":"Sub-category code"
 }
 ```
 
@@ -99,7 +100,7 @@ nl2sql-semantic-eval/
 ├── src/
 │   ├── train_codebert.py       # Train CodeBERT with Optuna hyperparameter search
 │   ├── inference_codebert.py   # Inference and metrics for CodeBERT classifier
-│   └── inference_hybrid.py     # Qwen2.5 + EA + ensemble evaluation script
+│   └── inference_hybrid.py     # Qwen2.5 + EA  ensemble evaluation script
 │
 ├── .gitignore                  # Files and folders to ignore in Git
 ├── requirements.txt            # Python dependencies
