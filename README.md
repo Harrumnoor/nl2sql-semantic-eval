@@ -9,17 +9,30 @@ Combines:
   
   **Installation** 
 1. Clone the repo
+   
      git clone https://github.com/Harrumnoor/nl2sql-semantic-eval
+
      cd nl2sql-semantic-eval
-2. Create & activate a virtualenv
+
+
+3. Create & activate a virtualenv
+   
      python3 -m venv venv
+
      source venv/bin/activate     # macOS/Linux
+   
      venv\Scripts\activate        # Windows
-3. Install dependencies
+   
+5. Install dependencies
+   
      pip install -r requirements.txt
-4. Configure paths
+   
+7. Configure paths
+   
      export DATA_DIR=./data
+   
      export TRAIN_PATH=$DATA_DIR/train.json
+   
      export TEST_PATH=$DATA_DIR/test.json
 
    **Usage**
